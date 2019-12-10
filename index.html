@@ -1,0 +1,69 @@
+<!doctype html>
+
+<head>
+  <title>MET Saga</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<style>
+  .pred-container {
+    margin-bottom: 20px;
+  }
+
+  .pred-container > div {
+    display: inline-block;
+    margin-right: 20px;
+    vertical-align: top;
+  }
+
+  .row {
+    display: table-row;
+  }
+  .cell {
+    display: table-cell;
+    padding-right: 20px;
+  }
+
+  #file-container {
+    margin-bottom: 20px;
+  }
+</style>
+
+<body>
+  <div class="tfjs-example-container">
+    <section class='title-area'>
+      <h1>The MET Saga</h1>
+      <h2>Classification of ancient artifacts from Metropoliton Museum of Arts, New York</h2>
+      <h2>Deep Learning for Computer Vision Final Project</h2>
+      
+    </section>
+
+    <section>
+      <p>
+        Classification of 29 ancient relics from the Metropolitan Museum of Arts in New York City
+      </p>
+
+    </section>
+
+    <section>
+      <div id="status"></div>
+    </section>
+
+
+    <section>
+      <h3>Model Output</h3>
+
+      <div id="file-container" style="display: none">
+        Upload an image: <input type="file" id="files" name="files[]" multiple />
+      </div>
+
+      <div id="predictions"></div>
+
+      <img style="display: none" id="met" src="met.jpg" width=192 height=192 />
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+    <script src="index.js"></script>
+  </div>
+</body>
